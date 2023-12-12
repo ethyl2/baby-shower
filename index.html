@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Shower Charades</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@400;700&family=REM:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-yellow-100" style="font-family: 'Kalnia', sans-serif;">
+  <div class="container mx-auto px-4 py-8 flex flex-col items-center justify-center space-y-4">
+    <header class="flex flex-col items-center justify-center space-y-4">
+        <h1 class="text-5xl md:text-7xl font-bold text-center md:mb-8">Baby Shower Charades</h1>
+        <p class="text-lg md:text-4xl max-w-2xl text-center">Click the ultrasound machine to get a word or phrase to act out!</p>
+    </header>
+    <main class="flex flex-col items-center justify-center space-y-4">
+        <img src="ultrasound.png" alt="ultrasound" id="get-word" class="w-80 bg-blue-100 hover:bg-blue-200 transition duration-300 ease-in-out transform hover:scale-105 text-white font-bold py-2 px-4 rounded" />
+        <p id="word" class="text-xl px-4 md:text-7xl font-bold text-center"></p>
+    </main>
+    <!-- Add your content here -->
+  </div>
+  <script>
+    const items = [
+        'bottle',
+        'diaper',
+        'diaper change',
+        'pacifier',
+        'baby powder',
+        'baby shampoo',
+        'sleepless night',
+        'baby bath',
+        'feeding baby food',
+        'peek-a-boo',
+        'teething',
+        'first baby steps',
+        'pushing a stroller',
+        'tummy time',
+        'baby monitor',
+        'rock-a-bye baby',
+        'baby sling',
+        'high chair',
+        'baby bump',
+        'rocking chair',
+        'rocking a cradle',
+        'taking photos of baby',
+        'baby blanket',
+        'burping the baby',
+        'applying diaper cream',
+        'mix up a bottle of formula',
+        'reading a bedtime story',
+        'singing a lullabye',
+        'buckling baby into car seat',
+        'lactation consultant',
+        'obstetrician',
+        'lamaze breathing',
+        'opening gifts',
+        'baby shower',
+        'onesie',
+        'baby bib',
+        'baby rattle',
+        'pumping milk',
+        'giving birth',
+        'installing a car seat',
+        'making a baby laugh',
+        'clipping baby nails',
+        'water breaking',
+        'morning sickness',
+        'swaddling a baby',
+        'baby\'s first birthday',
+        'reading a pregnancy test',
+        'bringing baby home from the hospital',
+        'testing the temperature of the milk',
+        'baby\'s first tooth',
+        'checking to see if diaper is wet/dirty',
+        'throwing a tantrum',
+        'baby getting a shot',
+        'getting an ultrasound',
+        'applying lotion on baby',
+        'taking baby\'s temperature',
+        'rubber ducky',
+        'cutting the umbilical cord',
+    ]
+
+    const getRandomItem = () => {
+        return items[Math.floor(Math.random() * items.length)]
+    }
+
+    const getWord = () => {
+        const word = getRandomItem()
+        document.getElementById('word').innerHTML = word
+    }
+
+    const button = document.getElementById('get-word')
+    button.addEventListener('click', getWord)
+  </script>
+</body>
+
+</html>
